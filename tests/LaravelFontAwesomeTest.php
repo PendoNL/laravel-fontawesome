@@ -1,13 +1,10 @@
 <?php
 
-use PendoNL\LaravelFontAwesome\LaravelFontAwesome;
+use PendoNL\LaravelFontAwesome\LaravelFontAwesome as LaravelFontAwesome;
 
 class LaravelFontAwesomeTest extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * Check if it can generate a simple icon
-     */
-    public function it_generates_a_simple_icon()
+    public function test_it_generates_a_simple_icon()
     {
         $fa = new LaravelFontAwesome();
 
@@ -17,10 +14,7 @@ class LaravelFontAwesomeTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expected, $generated);
     }
 
-    /**
-     * Check if it can generate an icon with options
-     */
-    public function it_generates_an_icon_with_options()
+    public function test_it_generates_an_icon_with_options()
     {
         $fa = new LaravelFontAwesome();
 
