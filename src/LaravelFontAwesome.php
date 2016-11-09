@@ -9,7 +9,7 @@ class LaravelFontAwesome
     {
         $options = $this->getOptions($options);
 
-        $classes = $this->buildIconClasses($icon, $options['class'] ?: '' );
+        $classes = $this->buildIconClasses($icon, (isset($options['class']) ? $options['class'] : ''));
 
         $attributes = $this->buildAttributes($options, $classes);
 
@@ -24,7 +24,7 @@ class LaravelFontAwesome
      */
     protected function getIcon($icon)
     {
-        return "fa-" . str_replace("fa-", $icon);
+        return "fa-" . str_replace("fa-", "", $icon);
     }
 
     /**
@@ -55,7 +55,7 @@ class LaravelFontAwesome
      */
     protected function buildIconClasses($icon, $extraClasses)
     {
-        return 'fa ' . $this->getIcon($icon) . ' ' . ( $extraClasses ?: '' );
+        return 'fa ' . $this->getIcon($icon) . ( $extraClasses != "" ? ' ' . $extraClasses : '' );
     }
 
     /**
@@ -70,15 +70,29 @@ class LaravelFontAwesome
         $attributes = [];
         $attributes[] = 'class="' . $classes .'"';
 
+        unset($options['class']);
+
         if(is_array($options))
         {
-            foreach($options as $attribute)
+            foreach($options as $attribute => $value)
             {
-                $attributes[] = $this->createAttribute($attribute);
+                $attributes[] = $this->createAttribute($attribute, $value);
             }
         }
 
         return (count($attributes) > 0) ? implode(' ', $attributes) : '' ;
+    }
+
+    /**
+     * Build the attribute.
+     *
+     * @param $attribute
+     * @param $value
+     * @return string
+     */
+    protected function createAttribute($attribute, $value)
+    {
+        return $attribute . '="' . $value . '"';
     }
 
     /**
