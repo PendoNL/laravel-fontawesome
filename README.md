@@ -1,5 +1,6 @@
 # FontAwesome helper and blade director for Laravel
 
+[![Latest version on Packagist](https://img.shields.io/packagist/v/pendonl/laravel-fontawesome.svg?style=flat-square)](https://packagist.org/packages/pendonl/laravel-fontawesome)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Travis branch](https://img.shields.io/travis/PendoNL/laravel-fontawesome/master.svg)](https://travis-ci.org/PendoNL/laravel-fontawesome)
 [![Scrutinizer](https://img.shields.io/scrutinizer/g/PendoNL/laravel-fontawesome.svg)](https://scrutinizer-ci.com/g/PendoNL/laravel-fontawesome/)
