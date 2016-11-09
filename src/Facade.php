@@ -3,8 +3,8 @@
 namespace PendoNL\LaravelFontAwesome;
 
 /**
- * Class Facade
- * @package PendoNL\LaravelFontAwesome
+ * Class Facade.
+ *
  * @method static string icon(string $icon, array $options = [])
  */
 class Facade extends \Illuminate\Support\Facades\Facade
