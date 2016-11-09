@@ -4,7 +4,6 @@ namespace PendoNL\LaravelFontAwesome;
 
 class LaravelFontAwesome
 {
-
     public function icon($icon, $options = [])
     {
         $options = $this->getOptions($options);
@@ -20,11 +19,12 @@ class LaravelFontAwesome
      * Strip the default fa- prefix from the icon name if provider.
      *
      * @param $icon
+     *
      * @return string
      */
     protected function getIcon($icon)
     {
-        return "fa-" . str_replace("fa-", "", $icon);
+        return 'fa-'.str_replace('fa-', '', $icon);
     }
 
     /**
@@ -32,14 +32,14 @@ class LaravelFontAwesome
      * string and assume it is an extra class name.
      *
      * @param $options
+     *
      * @return array
      */
     protected function getOptions($options)
     {
-        if(!is_array($options))
-        {
+        if (!is_array($options)) {
             $options = [
-                'class' => (string)$options
+                'class' => (string) $options,
             ];
         }
 
@@ -51,36 +51,36 @@ class LaravelFontAwesome
      *
      * @param $icon
      * @param $extraClasses
+     *
      * @return string
      */
     protected function buildIconClasses($icon, $extraClasses)
     {
-        return 'fa ' . $this->getIcon($icon) . ( $extraClasses != "" ? ' ' . $extraClasses : '' );
+        return 'fa '.$this->getIcon($icon).($extraClasses != '' ? ' '.$extraClasses : '');
     }
 
     /**
-     * Build the attribute list to add to the icon we are about to generate
+     * Build the attribute list to add to the icon we are about to generate.
      *
      * @param $options
      * @param $classes
+     *
      * @return string
      */
     protected function buildAttributes($options, $classes)
     {
         $attributes = [];
-        $attributes[] = 'class="' . $classes .'"';
+        $attributes[] = 'class="'.$classes.'"';
 
         unset($options['class']);
 
-        if(is_array($options))
-        {
-            foreach($options as $attribute => $value)
-            {
+        if (is_array($options)) {
+            foreach ($options as $attribute => $value) {
                 $attributes[] = $this->createAttribute($attribute, $value);
             }
         }
 
-        return (count($attributes) > 0) ? implode(' ', $attributes) : '' ;
+        return (count($attributes) > 0) ? implode(' ', $attributes) : '';
     }
 
     /**
@@ -88,22 +88,23 @@ class LaravelFontAwesome
      *
      * @param $attribute
      * @param $value
+     *
      * @return string
      */
     protected function createAttribute($attribute, $value)
     {
-        return $attribute . '="' . $value . '"';
+        return $attribute.'="'.$value.'"';
     }
 
     /**
-     * Build the icon with the correct attributes
+     * Build the icon with the correct attributes.
      *
      * @param $attributes
+     *
      * @return string
      */
     protected function buildIcon($attributes)
     {
-        return '<i ' . $attributes .'></i>';
+        return '<i '.$attributes.'></i>';
     }
-
 }
