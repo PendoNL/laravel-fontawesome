@@ -17,5 +17,11 @@
       "psr-4": {
         "PendoNL\\LaravelFontAwesome\\": "src/"
       }
-    }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "PendoNL\\LaravelFontAwesome\\Test\\": "tests"
+      }
+    },
+    "license": "MIT"
 }
