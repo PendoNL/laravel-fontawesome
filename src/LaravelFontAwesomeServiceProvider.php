@@ -2,7 +2,7 @@
 
 namespace PendoNL\LaravelFontAwesome;
 
-use Illumate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 /**
  * Class LaravelFontAwesomeServiceProvider
