@@ -80,4 +80,4 @@ Pendo is a webdevelopment agency based in Maastricht, Netherlands. If you'd like
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
