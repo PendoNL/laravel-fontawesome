@@ -1,4 +1,4 @@
-# FontAwesome helper and blade director for Laravel
+# FontAwesome helper and blade directive for Laravel
 
 [![Latest version on Packagist](https://img.shields.io/packagist/v/pendonl/laravel-fontawesome.svg?style=flat-square)](https://packagist.org/packages/pendonl/laravel-fontawesome)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
@@ -76,10 +76,11 @@ If you discover any security related issues, please email joshua@pendo.nl instea
 
 ## Credits
 
-It was incredible helpfull to view various packages of Spatie to get to this final version. Aswel as `lucasruroken/laravel-font-awesome` which I spotted and was the main reason to start creating my first package ever. Thanks both for open sourcing your packages!
+It was incredible helpfull to view various packages of Spatie to get to this final version. Aswel as `lucasruroken/laravel-font-awesome` which I spotted and was the main reason to start creating my first package ever. Thanks both for open sourcing your packages! I also tried to write down this first experience on my companies blog, comments appreciated!
 
 - [Spatie](https://github.com/spatie)
 - [LucasRuroken/laravel-font-awesome](https://github.com/lucasruroken/laravel-font-awesome)
+- [Blog about my first open-source experience](https://pendo.nl/blog/webdevelopment/fontawesome-for-laravel)
 
 ## About Pendo
 Pendo is a webdevelopment agency based in Maastricht, Netherlands. If you'd like, you can [visit our website](https://pendo.nl).
