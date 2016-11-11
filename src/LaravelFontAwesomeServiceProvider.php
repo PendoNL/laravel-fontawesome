@@ -18,24 +18,8 @@ class LaravelFontAwesomeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::directive('fa', function ($arguments) {
-            list($icon, $attributes) = explode(',', str_replace(['(', ')', ' ', "'"], '', $arguments), 2);
-
-            $options = [];
-
-            if ($attributes != '') {
-                $rawAttributes = str_replace(['array(', '[', ']', ')'], '', $attributes);
-                $arrAttributes = explode(',', $rawAttributes);
-
-                if (count($arrAttributes) > 0) {
-                    foreach ($arrAttributes as $string) {
-                        $attr = explode('=>', $string);
-                        $options[$attr[0]] = $attr[1];
-                    }
-                }
-            }
-
-            return (new LaravelFontAwesome())->icon($icon, $options);
+        Blade::directive('fa', function ($expression) {
+            return "<?php echo FontAwesome::icon({$expression}); ?>";
         });
     }
 
