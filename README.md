@@ -42,6 +42,12 @@ And last, but not least, you there'a a blade directive to use inside your blade 
 @fa('arrow-up', ['class' => 'tiny', 'id' => 'MyFirstIcon']);
 ```
 
+Using the Facade from within your templates work as well:
+
+```code
+{!! FontAwesome::icon('building') !!}
+{!! FontAwesome::icon('building', ['id' => 'building-icon']) !}}
+```
 
 ## Installation
 
