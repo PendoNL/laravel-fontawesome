@@ -5,6 +5,7 @@
 [![Travis branch](https://img.shields.io/travis/PendoNL/laravel-fontawesome/master.svg)](https://travis-ci.org/PendoNL/laravel-fontawesome)
 [![Scrutinizer](https://img.shields.io/scrutinizer/g/PendoNL/laravel-fontawesome.svg)](https://scrutinizer-ci.com/g/PendoNL/laravel-fontawesome/)
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/e660c560-9d50-43e3-9be1-e556ba78f189.svg)](https://insight.sensiolabs.com/projects/e660c560-9d50-43e3-9be1-e556ba78f189)
+[![Style Ci](https://styleci.io/repos/73300601/shield)](https://styleci.io/repos/73300601/)
 [![Github All Releases](https://img.shields.io/github/downloads/pendo/laravel-fontawesome/total.svg)](https://github.com/pendonl/laravel-fontawesome)
 
 The `PendoNL/laravel-fontawesome` package provides an easy way to include FontAwesome icons in your code, there's even a Blade directive to use them inside your blade templates.
