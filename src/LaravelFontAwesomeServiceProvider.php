@@ -19,7 +19,7 @@ class LaravelFontAwesomeServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::directive('fa', function ($arguments) {
-            list($icon, $attributes) = explode(',', str_replace(['(', ')', ' ', "'"], '', $arguments), 2);
+            list($icon, $attributes) = array_pad(explode(',', str_replace(['(', ')', ' ', "'"], '', $arguments), 2), 2, null);
 
             $options = [];
 
