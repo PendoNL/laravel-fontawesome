@@ -8,9 +8,11 @@
 [![Style Ci](https://styleci.io/repos/73300601/shield)](https://styleci.io/repos/73300601/)
 [![Total Downloads](https://img.shields.io/packagist/dt/pendonl/laravel-fontawesome.svg?style=flat-square)](https://packagist.org/packages/pendonl/laravel-fontawesome)
 
-The `PendoNL/laravel-fontawesome` package provides an easy way to include FontAwesome icons in your code, there's even a Blade directive to use them inside your blade templates.
+The `PendoNL/laravel-fontawesome` package provides an easy way to include FontAwesome icons in your code, there's even a Blade directive to use them inside your blade templates. 
 
 ## Usage
+
+Make sure you've loaded FontAwesome's CSS on your page! This package only providers little helpers to generate icons!
 
 You can use the Facade to generate icons from within your code:
 
