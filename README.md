@@ -51,7 +51,7 @@ You can install the package via composer:
 composer require pendonl/laravel-fontawesome
 ```
 
-Next, you must install the service provider:
+Next, you must install the service provider (For L5.5 and up Auto-Discovery is enabled):
 
 ```php
 // config/app.php
