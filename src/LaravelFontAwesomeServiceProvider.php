@@ -18,6 +18,10 @@ class LaravelFontAwesomeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../publish/config/laravel-fontawesome.php' => config_path('laravel-fontawesome.php'),
+        ], 'config');
+
         Blade::directive('fa', function ($expression) {
             return "<?php echo FontAwesome::icon({$expression}); ?>";
         });
@@ -30,6 +34,12 @@ class LaravelFontAwesomeServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $packageConfigFile = __DIR__.'/../publish/config/laravel-fontawesome.php';
+
+        $this->mergeConfigFrom(
+            $packageConfigFile, 'laravel-fontawesome'
+        );
+
         $this->app->singleton('laravel-font-awesome', 'PendoNL\LaravelFontAwesome\LaravelFontAwesome');
     }
 }

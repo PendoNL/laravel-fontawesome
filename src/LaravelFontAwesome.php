@@ -4,6 +4,16 @@ namespace PendoNL\LaravelFontAwesome;
 
 class LaravelFontAwesome
 {
+    public function icons($version=null)
+    {
+        if(is_null($version))
+        {
+            $version = config('laravel-fontawesome.default_version');
+        }
+
+        return include(__DIR__.'/versions/v'.$version.'/icons.php');
+    }
+
     public function icon($icon, $options = [])
     {
         $options = $this->getOptions($options);
